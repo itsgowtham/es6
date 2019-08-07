@@ -5,16 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        .h1{
+            background: yellow;
+        }
+    </style>
 </head>
 <body>
-    
-
     <script>
+
+        function highlight(strings, ...values){
+            let str = '';
+            strings.forEach((string, i) => {
+                str += `${string} <span contenteditable class="h1"> ${values[i] || ''} </span>`
+            })
+
+            return str;
+        }
         const name = 'Snickers';
         const age = 100;
+        const sentence = highlight`My dog's name is ${name} and he is ${age} years old`;
 
-
-        const sentence = `My dog's name is ${name} and he is ${age} years old`;
+    document.body.innerHTML = sentence;
 
     </script>
 </body>
