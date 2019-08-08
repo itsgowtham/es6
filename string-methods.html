@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const course = 'RFB2';
+        const flightNumber = '20-AC2019-jz';
+        const accountNumber = '845875855RT0001';
+
+        const make = 'BMW';
+        const model = 'x5';
+        const colour = 'Royal Blue';
+
+
+        //.startsWith() -- case sensitive
+        console.log(course.startsWith('RF')); // true
+        console.log(course.startsWith('rf')); // false
+
+        // check flight starts with AC 4 char
+        console.log(flightNumber.startsWith('AC')); // false
+        console.log(flightNumber.startsWith('AC', 3)); // true
+
+        //.endsWith() 
+        console.log(flightNumber.endsWith('jz')); // true
+        
+        //accountNumber check endsWith RT should not consider the number after RT 
+        console.log(accountNumber.endsWith('RT')); // false
+        console.log(accountNumber.endsWith('RT', 11)); // true
+
+        //.includes() which is similar to .Contains()
+        console.log(course.includes('RF')); // true
+
+        //.repeat()
+        console.log(':)'.repeat(3)); // :):):)
+
+
+        function leftPad(str, length = 20){
+            return `-> ${' '.repeat(length- str.length)}${str}`;
+        }
+
+        /*
+        ->          BMW
+        ->           x5
+        ->   Royal Blue
+        */
+        console.log(leftPad(make));
+        console.log(leftPad(model));
+        console.log(leftPad(colour));
+        
+    </script>
+
+</body>
+
+</html>
