@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const posts = [
+        {
+          _id: "5d8b38bb98d3805605b248c2",
+          index: 0,
+          guid: "3e504557-4392-48c4-87f6-a72001cb5aa2",
+          isActive: true,
+          balance: "$1,146.47",
+          picture: "http://placehold.it/32x32",
+          age: 34,
+          eyeColor: "green",
+          name: "Jenifer Wilkins",
+          gender: "female",
+          company: "EARGO",
+          email: "jeniferwilkins@eargo.com",
+          phone: "+1 (914) 549-3997",
+          address: "743 Adler Place, Dorneyville, Nevada, 1564",
+          about:
+            "Ipsum ea elit ad nostrud et velit anim do esse fugiat. Non esse id velit duis irure aliqua. Id aliquip minim duis fugiat voluptate ullamco eu ea occaecat est. Eu voluptate qui irure qui amet do cupidatat magna id nulla. Duis sit occaecat occaecat consequat. Et consectetur voluptate veniam reprehenderit id cillum nisi amet.\r\n",
+          registered: "2014-12-06T02:57:27 -06:-30",
+          latitude: 1.024233,
+          longitude: -88.973899,
+          tags: [
+            "laboris",
+            "officia",
+            "occaecat",
+            "magna",
+            "laborum",
+            "cillum",
+            "cillum"
+          ],
+          friends: [
+            {
+              id: 0,
+              name: "Cameron Smith"
+            },
+            {
+              id: 1,
+              name: "Chan Rosales"
+            },
+            {
+              id: 2,
+              name: "Freida Mcpherson"
+            }
+          ],
+          greeting: "Hello, Jenifer Wilkins! You have 3 unread messages.",
+          favoriteFruit: "strawberry"
+        },
+        {
+          _id: "5d8b38bb056b93d7699b3a77",
+          index: 1,
+          guid: "503ada0f-10b2-4f05-884a-f32acd137768",
+          isActive: true,
+          balance: "$2,720.65",
+          picture: "http://placehold.it/32x32",
+          age: 33,
+          eyeColor: "green",
+          name: "Jerry Patton",
+          gender: "female",
+          company: "OBLIQ",
+          email: "jerrypatton@obliq.com",
+          phone: "+1 (932) 462-2052",
+          address: "620 Wallabout Street, Vincent, Arkansas, 9734",
+          about:
+            "Veniam Lorem ut fugiat et in enim fugiat nisi culpa pariatur. In qui eu anim cillum mollit nisi non nulla sit duis nulla Lorem est ullamco. Ea culpa irure consectetur cupidatat eiusmod officia laborum nulla eiusmod esse adipisicing ut.\r\n",
+          registered: "2015-12-09T09:34:00 -06:-30",
+          latitude: -77.083583,
+          longitude: 179.113058,
+          tags: [
+            "in",
+            "voluptate",
+            "exercitation",
+            "dolor",
+            "ipsum",
+            "est",
+            "nulla"
+          ],
+          friends: [
+            {
+              id: 0,
+              name: "Weiss Klein"
+            },
+            {
+              id: 1,
+              name: "Shepherd Peterson"
+            },
+            {
+              id: 2,
+              name: "Lenore Reid"
+            }
+          ],
+          greeting: "Hello, Jerry Patton! You have 5 unread messages.",
+          favoriteFruit: "banana"
+        },
+        {
+          _id: "5d8b38bb2f766b49894d35eb",
+          index: 2,
+          guid: "b9cb3dfa-d3da-4a06-a859-a3f885ba0a2f",
+          isActive: true,
+          balance: "$3,297.78",
+          picture: "http://placehold.it/32x32",
+          age: 22,
+          eyeColor: "blue",
+          name: "Lila Curtis",
+          gender: "female",
+          company: "QIAO",
+          email: "lilacurtis@qiao.com",
+          phone: "+1 (828) 525-3787",
+          address: "153 Orange Street, Gerber, New Jersey, 5811",
+          about:
+            "Cupidatat tempor proident ipsum commodo exercitation incididunt labore elit aliqua cupidatat sunt cillum. Ipsum duis pariatur culpa voluptate dolore laboris. Cillum qui voluptate culpa proident dolor tempor do proident aute et. Nulla voluptate deserunt laboris eiusmod. Amet eiusmod fugiat eiusmod voluptate commodo ex ea officia nisi. Cupidatat culpa fugiat nisi do enim ut incididunt aliquip non non quis commodo.\r\n",
+          registered: "2016-01-14T05:33:14 -06:-30",
+          latitude: 57.34751,
+          longitude: 150.789344,
+          tags: [
+            "amet",
+            "deserunt",
+            "ipsum",
+            "ullamco",
+            "fugiat",
+            "in",
+            "sunt"
+          ],
+          friends: [
+            {
+              id: 0,
+              name: "Adeline Petty"
+            },
+            {
+              id: 1,
+              name: "Woods Jacobs"
+            },
+            {
+              id: 2,
+              name: "Kasey Carlson"
+            }
+          ],
+          greeting: "Hello, Lila Curtis! You have 8 unread messages.",
+          favoriteFruit: "strawberry"
+        },
+        {
+          _id: "5d8b38bb3c1de96acf815b56",
+          index: 3,
+          guid: "63330a50-6deb-480e-a3d5-172cbe56a972",
+          isActive: true,
+          balance: "$1,495.61",
+          picture: "http://placehold.it/32x32",
+          age: 33,
+          eyeColor: "green",
+          name: "May Emerson",
+          gender: "male",
+          company: "PAWNAGRA",
+          email: "mayemerson@pawnagra.com",
+          phone: "+1 (860) 434-3268",
+          address: "769 Herbert Street, Bergoo, Texas, 8132",
+          about:
+            "Cillum laborum ea tempor veniam labore. Velit ad incididunt duis sint est dolore ea nostrud Lorem ex ea. Veniam sit anim excepteur excepteur do esse amet deserunt officia ipsum amet. Esse nisi sunt excepteur adipisicing amet culpa non officia irure est id voluptate. Ipsum laboris sint ut magna. Pariatur magna adipisicing eu anim do in. Id voluptate nisi amet amet minim magna pariatur consectetur irure ea.\r\n",
+          registered: "2016-01-27T02:32:21 -06:-30",
+          latitude: 65.242992,
+          longitude: 147.785314,
+          tags: [
+            "ex",
+            "sint",
+            "reprehenderit",
+            "aliquip",
+            "officia",
+            "deserunt",
+            "non"
+          ],
+          friends: [
+            {
+              id: 0,
+              name: "Kathy Nichols"
+            },
+            {
+              id: 1,
+              name: "Hinton Harrell"
+            },
+            {
+              id: 2,
+              name: "Murphy Herman"
+            }
+          ],
+          greeting: "Hello, May Emerson! You have 6 unread messages.",
+          favoriteFruit: "strawberry"
+        },
+        {
+          _id: "5d8b38bbf31918b8114f541b",
+          index: 4,
+          guid: "2c4f6151-30dd-4f12-89af-1587e00aec0f",
+          isActive: true,
+          balance: "$3,033.18",
+          picture: "http://placehold.it/32x32",
+          age: 31,
+          eyeColor: "blue",
+          name: "Glover Ball",
+          gender: "male",
+          company: "ZAGGLE",
+          email: "gloverball@zaggle.com",
+          phone: "+1 (970) 478-2615",
+          address:
+            "419 Brightwater Avenue, Juntura, Federated States Of Micronesia, 9500",
+          about:
+            "Enim dolore cillum tempor laboris in Lorem incididunt quis anim non cupidatat. Ad excepteur anim in officia consequat nostrud deserunt amet pariatur cillum culpa id ullamco. Nostrud eu amet exercitation labore adipisicing.\r\n",
+          registered: "2016-03-09T12:39:50 -06:-30",
+          latitude: -50.721511,
+          longitude: 51.588447,
+          tags: [
+            "aute",
+            "velit",
+            "reprehenderit",
+            "duis",
+            "proident",
+            "ipsum",
+            "magna"
+          ],
+          friends: [
+            {
+              id: 0,
+              name: "Carolina Morris"
+            },
+            {
+              id: 1,
+              name: "Goff Rich"
+            },
+            {
+              id: 2,
+              name: "Santos Stone"
+            }
+          ],
+          greeting: "Hello, Glover Ball! You have 4 unread messages.",
+          favoriteFruit: "strawberry"
+        },
+        {
+          _id: "5d8b38bb69450b46ffeca427",
+          index: 5,
+          guid: "ee4cef7a-08bb-4701-95ce-61338a1a10bd",
+          isActive: true,
+          balance: "$2,550.73",
+          picture: "http://placehold.it/32x32",
+          age: 30,
+          eyeColor: "green",
+          name: "Ava Wynn",
+          gender: "female",
+          company: "ANIMALIA",
+          email: "avawynn@animalia.com",
+          phone: "+1 (955) 488-2245",
+          address: "711 George Street, Cavalero, Montana, 8475",
+          about:
+            "Ut ipsum ut Lorem et in eiusmod aliqua do. Amet quis duis anim cillum ea eiusmod ea laborum adipisicing reprehenderit quis exercitation incididunt tempor. Et velit consectetur veniam nisi minim aute cupidatat Lorem ex ad.\r\n",
+          registered: "2018-01-09T11:14:22 -06:-30",
+          latitude: 50.569091,
+          longitude: -76.587057,
+          tags: [
+            "enim",
+            "quis",
+            "occaecat",
+            "consequat",
+            "officia",
+            "labore",
+            "amet"
+          ],
+          friends: [
+            {
+              id: 0,
+              name: "Matilda Bond"
+            },
+            {
+              id: 1,
+              name: "Kristen Whitfield"
+            },
+            {
+              id: 2,
+              name: "French Head"
+            }
+          ],
+          greeting: "Hello, Ava Wynn! You have 7 unread messages.",
+          favoriteFruit: "strawberry"
+        },
+        {
+          _id: "5d8b38bb54511db74751b71d",
+          index: 6,
+          guid: "0a968996-f20d-4f07-91d9-9686d217985f",
+          isActive: false,
+          balance: "$2,588.08",
+          picture: "http://placehold.it/32x32",
+          age: 36,
+          eyeColor: "blue",
+          name: "Desiree Bauer",
+          gender: "female",
+          company: "SNOWPOKE",
+          email: "desireebauer@snowpoke.com",
+          phone: "+1 (865) 544-2786",
+          address: "887 Holt Court, Wawona, Florida, 6462",
+          about:
+            "Esse labore dolor do dolore consectetur consequat fugiat est consequat dolor. Enim eu eiusmod proident dolor laboris ipsum duis. Ex quis tempor adipisicing incididunt veniam est sint qui exercitation irure sunt ad. Nostrud Lorem eu occaecat enim quis ut elit cillum irure ullamco. Anim aute adipisicing cupidatat sint proident labore officia sunt sit.\r\n",
+          registered: "2016-08-05T11:31:21 -06:-30",
+          latitude: 41.037608,
+          longitude: 109.632569,
+          tags: ["duis", "Lorem", "minim", "elit", "ex", "voluptate", "non"],
+          friends: [
+            {
+              id: 0,
+              name: "Bradford Hurst"
+            },
+            {
+              id: 1,
+              name: "Jordan Fry"
+            },
+            {
+              id: 2,
+              name: "Black Roberson"
+            }
+          ],
+          greeting: "Hello, Desiree Bauer! You have 5 unread messages.",
+          favoriteFruit: "apple"
+        }
+      ];
+
+      // old way
+    //   const post = posts.find(post => {
+    //     console.log(post._id);
+    //     if(post._id === '5d8b38bb54511db74751b71d'){
+    //         return true;
+    //     }
+    //     return false;
+    //   });
+
+    // new way
+    const id = '5d8b38bb54511db74751b71d';
+    const post = posts.find(post => post._id === id);
+    const postIndex = posts.findIndex(post => post._id === id);
+    console.log(postIndex);
+
+    </script>
+  </body>
+</html>

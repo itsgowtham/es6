@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>The ...Spread Operator</title>
+  </head>
+  <body>
+    <script>
+        const featured = ['Deep dish', 'Peperoni', 'Hawaiian'];
+        const specialty = ['Meatzza', 'Spicy Mama', 'Margherita'];
+
+        const pizzas = [...featured, 'veg', ...specialty];
+        console.log("TCL: pizzas", pizzas)
+
+
+        /* this is like reference not copy
+            const firdayPizzas = pizzas;
+            this will change the pizzas[0] element also
+            fridayPizzas[0] = 'Canada Pie'
+        */
+
+        // [...pizzas] is a copy not reference
+        const firdayPizzas = [...pizzas];
+
+
+    </script>
+  </body>
+</html>
