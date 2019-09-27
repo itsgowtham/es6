@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Spread Examples</title>
+  </head>
+  <body>
+    <div class="people">
+      <p>Wes</p>
+      <p>Kait</p>
+      <p>Randy</p>
+    </div>
+
+    <script>
+      //Instead of Array.From we can use spread [...]
+      // const people = [...document.querySelector(".people p")];
+      const people = Array.from(document.querySelectorAll(".people p"));
+      const names = people.map(person => person.textContent);
+      //console.log("TCL: names", names)
+
+      const deepDish = {
+        pizzaName: "Deep Dish",
+        size: "Medium",
+        ingredients: ["Marinara", "Italian Sausage", "Dough", "Cheese"]
+      };
+
+      const shoppingList = ["Milk", "Flour", ...deepDish.ingredients];
+      //console.log("TCL: shoppingList", shoppingList)
+
+      const comments = [
+        { id: 207865, text: "I love your dog!" },
+        { id: 576566, text: "Cuuute! " },
+        { id: 975464, text: "You are so dump" },
+        { id: 755466, text: "Nice work" }
+      ];
+
+      const id = 975464;
+      const commentIndex = comments.findIndex(comment => comment.id === id);
+
+     const newComments = [...comments.slice(0, commentIndex),
+                                ...comments.slice(commentIndex + 1)];
+    // this.setState({comments: newComments}); something do like react to set the new comments
+
+
+    </script>
+  </body>
+</html>

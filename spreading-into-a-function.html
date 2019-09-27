@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const investors = ['Einstein', 'Newton', 'Galileo'];
+        const newInvestors = ['Musk', 'Jobs'];
+        /*
+        we can do below instead of spread ...
+        investors.push.apply(investors, newInvestors);
+        */
+        investors.push(...newInvestors);
+        console.log("TCL: investors", investors);
+
+        const name = ['John', 'Doe'];
+
+        function sayHi(first, last){
+            alert(`Hey there ${first} ${last}`);
+        }
+
+        //sayHi(name[0], name[1]);
+        sayHi(...name);
+    </script>
+</body>
+</html>
