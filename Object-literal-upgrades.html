@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Object literal upgrades</title>
+  </head>
+  <body>
+    <script>
+      const first = "snickers";
+      const last = "bos";
+      const age = 2;
+      const breed = "King Charles Cav";
+
+      const dog = {
+        firstName: first,
+        last,
+        age,
+        breed,
+        pals: ["Hugo", "Sunny"]
+      };
+      console.log("TCL: dog", dog);
+
+      const modal = {
+        create(selector) {},
+        open(content) {},
+        close(goodbye) {}
+      };
+
+      function inverseColor(color) {
+        return "#0033fed";
+      }
+
+      const key = "pocketColor";
+      const value = "#ffcc600";
+
+      const tShirt = {
+        [key]: value,
+        [`${key}Opposite`]: inverseColor(value)
+      };
+      console.log("TCL: tShirt", tShirt);
+
+      const keys = ["size", "color", "weight"];
+      const values = ["Medium", "red", 100];
+
+      const shirt = {
+        [keys.shift()]: values.shift(),
+        [keys.shift()]: values.shift(),
+        [keys.shift()]: values.shift()
+      };
+      console.log("TCL: shirt", shirt);
+
+
+
+    </script>
+  </body>
+</html>
