@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Promisifying Function</title>
+</head>
+<body>
+<script>
+        // navigator.geolocation.getCurrentPosition(function(pos) {
+        //     console.log(`It's worked`);
+        //     console.log(pos);
+        // }, function(err){
+        //     console.log(`It's failed`);
+        //     console.log(err);
+        // })
+
+        function getCurrentPosition(...args){
+            return new Promise((resolve, reject) => {
+                navigator.geolocation.getCurrentPosition(...args, resolve, reject);
+            });
+        }
+
+        async function go(){
+            console.log('starting');
+            const pos = await getCurrentPosition();
+            console.log(pos);
+            console.log('finished');
+        }
+
+        go();
+
+</script>
+</body>
+</html>

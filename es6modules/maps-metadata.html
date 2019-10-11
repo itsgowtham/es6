@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Maps meta data</title>
+  </head>
+  <body>
+    <button>Snakes &#x1F40D;</button>
+    <button>Cry &#x1F62D;</button>
+    <button>Ice Cream &#x1F368;</button>
+    <button>Flamin' &#x1F525;</button>
+    <button>Dancer &#x1F483;</button>
+
+    <script>
+      const clickCounts = new Map();
+      const buttons = document.querySelectorAll("button");
+
+      buttons.forEach(button => {
+        clickCounts.set(button, 0);
+
+        button.addEventListener("click", function() {
+            const val = clickCounts.get(this);
+            clickCounts.set(this, val+ 1);
+            console.log(clickCounts);
+        });
+      });
+    </script>
+  </body>
+</html>

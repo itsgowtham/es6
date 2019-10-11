@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Proxies-safety</title>
+  </head>
+  <body>
+    <script>
+      const map = {};
+
+      map.longitiude = 79.3423; //spell wrong
+      map.longitude = 79.3423; //full spelling
+      map.long = 79.3423; // wrong key
+      map.lon = 79.3423; // nope
+      map.lng = 79.3423; // Got it!
+
+      const person = { name: "Wes" };
+      person.ID = 123; //no
+      person.iD = 123; //no
+      person.id = 123; //yes
+
+      const safeHandler = {
+        set(target, name, value) {
+          const likekey = Object.keys(target).find(
+            k => k.toLowerCase() == name.toLowerCase()
+          );
+          if (!(name in target) && likekey) {
+            throw new Error(
+              `Oops! Looks like we already have (an) ${name} property but with the case of ${likekey}`
+            );
+          }
+          target[name] = value;
+        }
+      };
+
+      const safety = new Proxy({ id: 100 }, safeHandler);
+
+      safety.ID = 200;
+
+    </script>
+  </body>
+</html>
